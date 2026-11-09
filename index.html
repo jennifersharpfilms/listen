@@ -24,22 +24,23 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--serif);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1040px;margin:0 auto;padding:48px 20px 80px}
 a{color:var(--accent);text-underline-offset:3px}
-.label{font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+.label{font-family:var(--sans);font-weight:400;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
 h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(76px,19vw,128px);line-height:.9;margin:0;letter-spacing:-.02em;color:var(--ink)}
-.sub{font-family:var(--sans);font-weight:300;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin:16px 0 0}
+.sub{font-family:var(--sans);font-weight:300;font-size:15px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin:16px 0 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;font:500 14px/1 var(--sans);letter-spacing:.07em;padding:16px 30px;border-radius:999px;background:var(--purple);color:#fff;text-decoration:none;border:1px solid var(--purple);transition:background .2s,color .2s}
 .btn:hover{background:#463873;border-color:#463873;color:#fff}
 .btn.ghost{background:transparent;color:var(--purple);border-color:var(--purple)}
 .btn.ghost:hover{background:var(--purple);color:#fff}
 .btn:focus-visible,.tile:focus-visible,.pill:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 /* Giving block at the top */
-.giveTop{margin:34px 0 0;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.giveTop{margin:34px 0 0;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+.giveTop .note{flex-basis:100%}
 .giveTop .btn{padding:18px 40px;font-size:15px}
 .direct{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.direct .or{font-family:var(--sans);font-weight:300;font-size:13px;color:var(--muted);margin-right:4px}
-.pill{display:inline-flex;align-items:center;font:400 13px/1 var(--sans);letter-spacing:.04em;padding:11px 18px;border-radius:999px;border:1px solid rgba(87,71,140,.45);color:var(--purple);text-decoration:none;background:rgba(255,255,255,.35);transition:border-color .2s,background .2s}
+.direct .or{font-family:var(--sans);font-weight:300;font-size:15px;color:var(--muted);margin-right:4px}
+.pill{display:inline-flex;align-items:center;font:400 14px/1 var(--sans);letter-spacing:.04em;padding:11px 18px;border-radius:999px;border:1px solid rgba(87,71,140,.45);color:var(--purple);text-decoration:none;background:rgba(255,255,255,.35);transition:border-color .2s,background .2s}
 .pill:hover{border-color:var(--purple);background:#fff}
-.note{font-family:var(--sans);font-weight:300;font-size:12px;color:var(--muted);margin:0}
+.note{font-family:var(--sans);font-weight:300;font-size:14px;color:var(--muted);margin:0}
 /* Film tiles */
 .tile{display:block;position:relative;border-radius:6px;overflow:hidden;text-decoration:none;color:var(--fg);box-shadow:0 1px 2px rgba(34,30,36,.06),0 12px 32px -12px rgba(34,30,36,.25)}
 .trailer{margin:48px 0 0;aspect-ratio:16/9;background:radial-gradient(ellipse at 30% 40%,#3a2d58 0%,var(--tile) 70%);color:var(--cream);cursor:pointer}
@@ -47,34 +48,35 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(7
 .trailer img{position:absolute;left:6%;top:9%;height:91%;width:auto;mix-blend-mode:screen}
 .trailer .wm{position:absolute;right:7%;top:30%;transform:translateY(-50%);text-align:right}
 .trailer .wm b{display:block;font-family:Georgia,serif;font-weight:400;font-size:clamp(44px,10vw,84px);line-height:1;color:var(--cream)}
-.trailer .wm span{display:block;margin-top:10px;font-family:var(--sans);font-weight:300;font-size:clamp(8px,1.6vw,12px);letter-spacing:.24em;text-transform:uppercase;color:#bdb3ee}
+.trailer .wm span{display:block;margin-top:10px;font-family:var(--sans);font-weight:300;font-size:clamp(9px,1.7vw,13px);letter-spacing:.24em;text-transform:uppercase;color:#bdb3ee}
 .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;border:1px solid rgba(244,239,230,.85);background:rgba(20,17,23,.35);transition:transform .2s,background .2s}
 .play:after{content:"";position:absolute;left:31px;top:24px;border-left:22px solid var(--cream);border-top:14px solid transparent;border-bottom:14px solid transparent}
 .trailer:hover .play{transform:translate(-50%,-50%) scale(1.06);background:rgba(20,17,23,.55)}
-.cap{position:absolute;left:0;right:0;bottom:0;padding:16px 20px;display:flex;justify-content:space-between;font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);background:linear-gradient(transparent,rgba(20,14,34,.6))}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:16px 20px;display:flex;justify-content:space-between;font-family:var(--sans);font-weight:400;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);background:linear-gradient(transparent,rgba(20,14,34,.6))}
 .overview{margin:24px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:stretch;box-shadow:none;border-radius:0;overflow:visible}
 .overview .art{position:relative;aspect-ratio:16/9;background:#e9e9e9;border:2px solid var(--purple);border-radius:4px;overflow:hidden}
 .overview .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.overview .tag{position:absolute;left:12px;top:12px;font:500 10px/1 var(--sans);letter-spacing:.18em;color:#fff;background:var(--purple);padding:6px 9px;border-radius:3px}
-.overview .body{padding:0;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.overview .tag{position:absolute;left:12px;top:12px;font:500 12px/1 var(--sans);letter-spacing:.18em;color:#fff;background:var(--purple);padding:6px 9px;border-radius:3px}
+.overview .body{padding:0;display:flex;flex-direction:column;justify-content:center;gap:20px}
 .overview h3{margin:-4px 0 0;font-weight:400;font-size:27px;line-height:1.15;color:var(--ink)}
-.overview .txt{display:flex;flex-direction:column;gap:10px;padding-top:4px}
+.overview .txt{display:flex;flex-direction:column;gap:10px}
 .overview p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.55}
-.overview .btn{align-self:stretch;margin-top:0;padding:16px 24px}
+.overview .btn{align-self:flex-start;margin-top:0;padding:16px 28px}
 .overview:hover .btn{background:#463873;border-color:#463873;color:#fff}
 /* Top epigraph */
 .band{background:var(--lav);border-bottom:1px solid #d3cbe8}
 .epi{max-width:1040px;margin:0 auto;padding:16px 20px;text-align:center;font-style:italic;font-size:clamp(15px,2.2vw,18px);color:#3b3060;line-height:1.5}
-.epi span{font-family:var(--sans);font-style:normal;font-weight:300;font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-left:10px;white-space:nowrap;color:#6a5ca0}
+.epi span{font-family:var(--sans);font-style:normal;font-weight:300;font-size:12px;letter-spacing:.24em;text-transform:uppercase;margin-left:10px;white-space:nowrap;color:#6a5ca0}
 /* Eric quote, full width, then the photo strip */
 .voice{margin:72px auto 0;text-align:center}
 blockquote{margin:0 auto;max-width:720px;font-size:clamp(20px,3vw,25px);line-height:1.45;color:var(--ink)}
 blockquote em{display:block;margin-top:8px;font-style:italic;color:var(--accent)}
-cite{display:block;margin-top:20px;font-family:var(--sans);font-style:normal;font-weight:300;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+cite{display:block;margin-top:20px;font-family:var(--sans);font-style:normal;font-weight:300;font-size:14.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
 .strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:40px 0 0}
 .strip img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:3px}
 section{margin:76px 0 0}
-h2{font-weight:400;font-size:clamp(28px,5vw,38px);line-height:1.2;margin:0 0 18px;color:var(--ink)}
+h2{font-weight:400;font-size:clamp(26px,5vw,38px);line-height:1.2;margin:0 0 18px;color:var(--ink)}
+@media (min-width:900px){h2.one{font-size:32px;white-space:nowrap}}
 p{margin:0 0 16px}
 strong{font-weight:500;color:var(--ink)}
 .hero{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:24px;margin:48px 0 0;align-items:stretch}
@@ -89,7 +91,7 @@ section.narrow,.voice{max-width:800px;margin-left:auto;margin-right:auto}
 .meter i{display:block;height:100%;width:13%;background:var(--accent);border-radius:99px}
 .raised{font-size:17px;margin:0}
 .raised strong{color:var(--accent)}
-.small{font-family:var(--sans);font-weight:300;font-size:13px;color:var(--muted)}
+.small{font-family:var(--sans);font-weight:300;font-size:15px;color:var(--muted)}
 .rule{border:0;border-top:1px solid var(--line);margin:24px 0}
 .give{display:grid;gap:14px}
 .opt{border:1px solid var(--line);border-radius:6px;padding:28px;background:rgba(255,255,255,.4)}
@@ -98,14 +100,15 @@ section.narrow,.voice{max-width:800px;margin-left:auto;margin-right:auto}
 .handles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
 .handles a{display:block;border:1px solid var(--line);border-radius:6px;padding:14px 16px;text-decoration:none;color:var(--fg);background:#fff;transition:border-color .2s}
 .handles a:hover{border-color:var(--muted)}
-.handles b{display:block;font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.handles b{display:block;font-family:var(--sans);font-weight:300;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .handles span{font-size:16px;overflow-wrap:anywhere}
-footer{margin:92px 0 0;text-align:center}
-footer .bridge{font-style:italic;font-size:clamp(20px,3.6vw,24px);line-height:1.5;color:var(--ink);max-width:600px;margin:0 auto 30px}
+footer{margin:56px 0 0;text-align:center}
+.bridge.endq{margin:88px auto 0;text-align:center}
+.bridge{font-style:italic;font-size:clamp(20px,3.6vw,24px);line-height:1.5;color:var(--ink);max-width:600px;margin:0 auto 30px}
 @media (max-width:640px){
   .wrap{padding-top:44px}
-  .giveTop{align-items:stretch}.giveTop .btn{width:100%}
-  .direct{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.direct .or{grid-column:1/-1}.pill{justify-content:center;padding:11px 4px;font-size:12.5px}
+  .giveTop{flex-direction:column;align-items:stretch;gap:16px}.giveTop .btn{width:100%}
+  .direct{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.direct .or{grid-column:1/-1}.pill{justify-content:center;padding:11px 4px;font-size:14.5px}
 
   .overview{grid-template-columns:1fr;gap:20px}
   .hero{grid-template-columns:1fr;gap:16px}.hero .trailer{aspect-ratio:16/9;height:auto;min-height:0}
@@ -127,7 +130,7 @@ footer .bridge{font-style:italic;font-size:clamp(20px,3.6vw,24px);line-height:1.
     <div class="giveTop">
       <a class="btn" href="https://freenowfoundation.org/listen/" target="_blank" rel="noopener">Donate (tax-deductible)</a>
       <div class="direct">
-        <span class="or">Or give directly:</span>
+        <span class="or">Give directly:</span>
         <a class="pill" href="https://paypal.me/AnecdotalsMovie" target="_blank" rel="noopener">PayPal</a>
         <a class="pill" href="https://venmo.com/u/Sharpfilms" target="_blank" rel="noopener">Venmo</a>
         <a class="pill" href="https://cash.app/$Sharpfilms" target="_blank" rel="noopener">Cash App</a>
@@ -160,13 +163,13 @@ footer .bridge{font-style:italic;font-size:clamp(20px,3.6vw,24px);line-height:1.
     <span class="body">
       <span class="txt"><h3>Explore the series</h3>
       <p>The stories, the six episodes, and the people behind the film, in an 18-page project overview.</p></span>
-      <span class="btn">Open the overview</span>
+      <span class="btn">Read the project overview</span>
     </span>
   </a>
 
   <section class="narrow">
     <p class="label">The series</p>
-    <h2>What happens to a person when no one believes them?</h2>
+    <h2 class="one">What happens to a person when no one believes them?</h2>
     <p><strong>Listen</strong> is a film series featuring the personal stories of people who were deeply affected by the COVID vaccine. Much of it is told through their own private videos as they tried to find someone to listen. They have spent years trying to be heard. Some are still fighting. Others gave up.</p>
     <p><strong>Help us tell their stories.</strong></p>
   </section>
@@ -181,17 +184,27 @@ footer .bridge{font-style:italic;font-size:clamp(20px,3.6vw,24px);line-height:1.
     </div>
   </div>
 
+  <section class="narrow">
+    <p class="label">The filmmaker</p>
+    <p><strong>Jennifer Sharp</strong> is an NYU graduate and an award-winning filmmaker with more than five features to her name.</p>
+    <p>In 2023, she released <a href="https://www.anecdotalsmovie.com" target="_blank" rel="noopener"><em>Anecdotals</em></a>, a personal documentary that grew out of her own vaccine reaction. Community groups held screenings, and a Bermuda cinema added a free showing to meet demand.</p>
+    <p>Determined to tell the story carefully, she had the film vetted by a team of lawyers before release. YouTube pulled it anyway, then, in a rare move, reinstated it after an appeal and a review of the film and its legal vetting. It has since been viewed and shared more than one million times across platforms.</p>
+    <p style="font-size:21px;margin-top:24px"><em style="color:var(--accent)">Listen.</em> is the next chapter.</p>
+  </section>
+
+  <p class="bridge endq">This film bridges beliefs and politics to provide a place to meet and consider hard questions together.</p>
+
   <section id="give" class="narrow">
     <p class="label">Give</p>
     <div class="give">
       <div class="opt">
         <h3>Tax-deductible gift</h3>
-        <p class="small" style="margin:0;font-size:14px">Through our fiscal sponsor, Free Now Foundation, a registered 501(c)(3) nonprofit (EIN 92-3631610). Card, Apple Pay, bank transfer, donor-advised fund, or check.</p>
+        <p class="small" style="margin:0;font-size:15.5px">Through our fiscal sponsor, Free Now Foundation, a registered 501(c)(3) nonprofit (EIN 92-3631610). Card, Apple Pay, bank transfer, donor-advised fund, or check.</p>
         <div class="cta"><a class="btn" href="https://freenowfoundation.org/listen/" target="_blank" rel="noopener">Donate today</a></div>
       </div>
       <div class="opt">
         <h3>Direct to the filmmaker</h3>
-        <p class="small" style="margin:0;font-size:14px">Goes to Anecdotals LLC / Sharp Films. Not tax-deductible.</p>
+        <p class="small" style="margin:0;font-size:15.5px">Goes to Anecdotals LLC / Sharp Films. Not tax-deductible.</p>
         <div class="handles">
           <a href="https://paypal.me/AnecdotalsMovie" target="_blank" rel="noopener"><b>PayPal</b><span>AnecdotalsMovie</span></a>
           <a href="https://venmo.com/u/Sharpfilms" target="_blank" rel="noopener"><b>Venmo</b><span>@Sharpfilms</span></a>
@@ -202,16 +215,7 @@ footer .bridge{font-style:italic;font-size:clamp(20px,3.6vw,24px);line-height:1.
     </div>
   </section>
 
-  <section class="narrow">
-    <p class="label">The filmmaker</p>
-    <p><strong>Jennifer Sharp</strong> is an NYU graduate and an award-winning filmmaker with more than five features to her name.</p>
-    <p>In 2023, she released <a href="https://www.anecdotalsmovie.com" target="_blank" rel="noopener"><em>Anecdotals</em></a>, a personal documentary that grew out of her own vaccine reaction. Community groups held screenings, and a Bermuda cinema added a free showing to meet demand.</p>
-    <p>Determined to tell the story carefully, she had the film vetted by a team of lawyers before release. YouTube pulled it anyway, then, in a rare move, reinstated it after an appeal and a review of the film and its legal vetting. It has since been viewed and shared more than one million times across platforms.</p>
-    <p style="font-size:21px;margin-top:24px"><em style="color:var(--accent)">Listen.</em> is the next chapter.</p>
-  </section>
-
   <footer>
-    <p class="bridge">This film bridges beliefs and politics to provide a place to meet and consider hard questions together.</p>
     <a class="btn ghost" href="mailto:jennifersharpfilms@gmail.com">Contact Jennifer</a>
     <p class="small" style="margin-top:16px">jennifersharpfilms@gmail.com</p>
   </footer>
